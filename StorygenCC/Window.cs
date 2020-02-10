@@ -1,6 +1,8 @@
-﻿using System;
+﻿using StorygenCC.utils;
+using System;
 using System.IO;
 using System.Windows.Forms;
+using static System.Collections.Specialized.BitVector32;
 
 namespace StorygenCC
 {
@@ -35,6 +37,23 @@ namespace StorygenCC
                 loadedBeatmapPath.Text = $"Loaded beatmap: {mapsetPath}";
                 sectionsPanelContainer.Visible = true;
             }
+        }
+
+        private void btbAddSection_Click(object sender, EventArgs e)
+        {
+            SectionWindow sectionForm = new SectionWindow();
+            if(sectionForm.ShowDialog() == DialogResult.OK)
+            {
+                AddSection(sectionForm.section);
+            }
+        }
+
+        public void AddSection(StoryboardSection section) => sectionsPanel.Items.Add(new ListViewItem(section.ConvertSectionToString()));
+
+        private void btnRemoveSection_Click(object sender, EventArgs e)
+        {
+            if(sectionsPanel.SelectedItems.Count > 0)
+                sectionsPanel.Items.RemoveAt(sectionsPanel.SelectedIndices[0]);
         }
     }
 }
