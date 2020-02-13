@@ -124,9 +124,9 @@
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.White;
-            this.btnAccept.Location = new System.Drawing.Point(0, 147);
+            this.btnAccept.Location = new System.Drawing.Point(0, 143);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(216, 23);
+            this.btnAccept.Size = new System.Drawing.Size(220, 23);
             this.btnAccept.TabIndex = 8;
             this.btnAccept.Text = "OK";
             this.btnAccept.UseVisualStyleBackColor = false;
@@ -137,8 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(216, 170);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(220, 166);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEndTime);
@@ -148,6 +147,8 @@
             this.Controls.Add(this.inputEndTime);
             this.Controls.Add(this.inputStartTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SectionWindow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

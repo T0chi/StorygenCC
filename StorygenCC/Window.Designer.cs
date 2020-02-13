@@ -32,11 +32,11 @@
             this.btnConfig = new System.Windows.Forms.Button();
             this.titleSections = new System.Windows.Forms.Label();
             this.sectionsPanelContainer = new System.Windows.Forms.Panel();
-            this.subTitle = new System.Windows.Forms.Label();
-            this.btnAddSection = new System.Windows.Forms.Button();
-            this.txtAddSection = new System.Windows.Forms.Label();
             this.txtRemoveSection = new System.Windows.Forms.Label();
             this.btnRemoveSection = new System.Windows.Forms.Button();
+            this.txtAddSection = new System.Windows.Forms.Label();
+            this.btnAddSection = new System.Windows.Forms.Button();
+            this.subTitle = new System.Windows.Forms.Label();
             this.sectionsPanelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,51 +203,6 @@
             this.sectionsPanelContainer.TabIndex = 11;
             this.sectionsPanelContainer.Visible = false;
             // 
-            // subTitle
-            // 
-            this.subTitle.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.subTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subTitle.AutoSize = true;
-            this.subTitle.BackColor = System.Drawing.Color.Transparent;
-            this.subTitle.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.subTitle.Location = new System.Drawing.Point(734, 32);
-            this.subTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.subTitle.Name = "subTitle";
-            this.subTitle.Size = new System.Drawing.Size(41, 16);
-            this.subTitle.TabIndex = 12;
-            this.subTitle.Text = "by PoNo";
-            this.subTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnAddSection
-            // 
-            this.btnAddSection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddSection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(30)))));
-            this.btnAddSection.BackgroundImage = global::StorygenCC.Properties.Resources.plus2;
-            this.btnAddSection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddSection.FlatAppearance.BorderSize = 0;
-            this.btnAddSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSection.Location = new System.Drawing.Point(738, 0);
-            this.btnAddSection.Name = "btnAddSection";
-            this.btnAddSection.Size = new System.Drawing.Size(25, 25);
-            this.btnAddSection.TabIndex = 6;
-            this.btnAddSection.UseVisualStyleBackColor = false;
-            this.btnAddSection.Click += new System.EventHandler(this.btbAddSection_Click);
-            // 
-            // txtAddSection
-            // 
-            this.txtAddSection.AutoSize = true;
-            this.txtAddSection.BackColor = System.Drawing.Color.Transparent;
-            this.txtAddSection.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddSection.ForeColor = System.Drawing.Color.White;
-            this.txtAddSection.Location = new System.Drawing.Point(643, 3);
-            this.txtAddSection.Margin = new System.Windows.Forms.Padding(0);
-            this.txtAddSection.Name = "txtAddSection";
-            this.txtAddSection.Size = new System.Drawing.Size(92, 19);
-            this.txtAddSection.TabIndex = 11;
-            this.txtAddSection.Text = "Add new section";
-            this.txtAddSection.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // txtRemoveSection
             // 
             this.txtRemoveSection.AutoSize = true;
@@ -275,6 +230,51 @@
             this.btnRemoveSection.TabIndex = 12;
             this.btnRemoveSection.UseVisualStyleBackColor = false;
             this.btnRemoveSection.Click += new System.EventHandler(this.btnRemoveSection_Click);
+            // 
+            // txtAddSection
+            // 
+            this.txtAddSection.AutoSize = true;
+            this.txtAddSection.BackColor = System.Drawing.Color.Transparent;
+            this.txtAddSection.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddSection.ForeColor = System.Drawing.Color.White;
+            this.txtAddSection.Location = new System.Drawing.Point(643, 3);
+            this.txtAddSection.Margin = new System.Windows.Forms.Padding(0);
+            this.txtAddSection.Name = "txtAddSection";
+            this.txtAddSection.Size = new System.Drawing.Size(92, 19);
+            this.txtAddSection.TabIndex = 11;
+            this.txtAddSection.Text = "Add new section";
+            this.txtAddSection.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnAddSection
+            // 
+            this.btnAddSection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddSection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(30)))));
+            this.btnAddSection.BackgroundImage = global::StorygenCC.Properties.Resources.plus;
+            this.btnAddSection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddSection.FlatAppearance.BorderSize = 0;
+            this.btnAddSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSection.Location = new System.Drawing.Point(738, 0);
+            this.btnAddSection.Name = "btnAddSection";
+            this.btnAddSection.Size = new System.Drawing.Size(25, 25);
+            this.btnAddSection.TabIndex = 6;
+            this.btnAddSection.UseVisualStyleBackColor = false;
+            this.btnAddSection.Click += new System.EventHandler(this.btbAddSection_Click);
+            // 
+            // subTitle
+            // 
+            this.subTitle.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.subTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subTitle.AutoSize = true;
+            this.subTitle.BackColor = System.Drawing.Color.Transparent;
+            this.subTitle.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.subTitle.Location = new System.Drawing.Point(734, 32);
+            this.subTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.subTitle.Name = "subTitle";
+            this.subTitle.Size = new System.Drawing.Size(41, 16);
+            this.subTitle.TabIndex = 12;
+            this.subTitle.Text = "by PoNo";
+            this.subTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Window
             // 

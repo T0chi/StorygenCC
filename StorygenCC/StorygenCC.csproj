@@ -52,7 +52,9 @@
     <Compile Include="SectionWindow.Designer.cs">
       <DependentUpon>SectionWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="utils\FontManager.cs" />
     <Compile Include="utils\Section.cs" />
+    <Compile Include="utils\StoryboardOptions.cs" />
     <Compile Include="Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,12 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

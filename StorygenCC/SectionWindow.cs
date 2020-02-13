@@ -34,7 +34,6 @@ namespace StorygenCC
                 return mm + ss + ms;
             }
             else return int.Parse(time);
-
         }
 
         private void btnAccept_Click_1(object sender, EventArgs e)

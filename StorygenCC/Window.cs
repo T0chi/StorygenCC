@@ -1,8 +1,9 @@
-﻿using StorygenCC.utils;
+﻿using storygen;
+using StorygenCC.utils;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using static System.Collections.Specialized.BitVector32;
 
 namespace StorygenCC
 {
@@ -10,6 +11,7 @@ namespace StorygenCC
     {
         private string mapsetPath;
         private string filePath;
+        private List<StoryboardSection> sections = new List<StoryboardSection>();
 
         public Window()
         {
@@ -18,7 +20,7 @@ namespace StorygenCC
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-
+            ExportStoryboard();
         }
 
         private void loadProject_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace StorygenCC
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 filePath = openFileDialog.FileName;
-                mapsetPath = new FileInfo(filePath).Directory.FullName;
+                mapsetPath = new FileInfo(filePath).Directory.FullName + "\\";
                 loadedBeatmapPath.Text = $"Loaded beatmap: {mapsetPath}";
                 sectionsPanelContainer.Visible = true;
             }
@@ -48,12 +50,22 @@ namespace StorygenCC
             }
         }
 
-        public void AddSection(StoryboardSection section) => sectionsPanel.Items.Add(new ListViewItem(section.ConvertSectionToString()));
+        public void AddSection(StoryboardSection section)
+        {
+            sectionsPanel.Items.Add(new ListViewItem(section.ConvertSectionToString()));
+            sections.Add(section);
+        }
 
         private void btnRemoveSection_Click(object sender, EventArgs e)
         {
             if(sectionsPanel.SelectedItems.Count > 0)
                 sectionsPanel.Items.RemoveAt(sectionsPanel.SelectedIndices[0]);
+        }
+
+        private void ExportStoryboard()
+        {
+            Storyboard storyboard = new Storyboard(mapsetPath, sections);
+            storyboard.Export();
         }
     }
 }
